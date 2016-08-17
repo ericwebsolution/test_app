@@ -1,8 +1,13 @@
-table .sortable:before,
-table .sortable.asc:before {
-  content: '\25b2';
-}
 
-table .sortable.desc:before {
-  content: '\25bc';
+table {
+  .sortable {
+    &:before,
+    &.asc:before {
+      content: '\25b2';   
+    }
+
+    &.desc:before {
+      content: '\25bc';
+    }
+  }
 }
