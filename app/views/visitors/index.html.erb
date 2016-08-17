@@ -1,1 +1,45 @@
-<h3>Welcome</h3>
+
+<div class="table-responsive">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Surname</th>
+				<th>Given Name</th>
+				<th><%= sortable "avg", "AVG" %></th>
+				<th><%= sortable "hr", "HR" %></th>
+				<th><%= sortable "rbi", "RBI" %></th>
+				<th><%= sortable "runs", "RUNS" %></th>
+				<th><%= sortable "sb", "SB" %></th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @players_paged.each do |player| %>
+				<tr>
+					<td>
+						<%= player[:surname] %>
+					</td>
+					<td>
+						<%= player[:given_name] %>
+					</td>
+					<td>
+						<%= player[:avg] %>
+					</td>
+					<td>
+						<%= player[:hr] %>
+					</td>
+					<td>
+						<%= player[:rbi] %>
+					</td>
+					<td>
+						<%= player[:runs] %>
+					</td>
+					<td>
+						<%= player[:sb] %>
+					</td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+
+<%= will_paginate @players_paged, renderer: BootstrapPagination::Rails %>

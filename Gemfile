@@ -31,6 +31,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'pry-rails'
+  gem 'pry-nav'
   gem 'pry-rescue'
   gem 'rspec-rails'
   gem 'rubocop'
@@ -46,3 +47,6 @@ group :test do
   gem 'launchy'
   gem 'selenium-webdriver'
 end
+
+gem 'nokogiri'
+gem 'will_paginate-bootstrap'
